@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mantenemos tus variables de acento pero ajustadas al tema oscuro */
+  --color-accent: #3b82f6; 
+  --color-accent-bg: rgba(59, 130, 246, 0.1);
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+:root {
+  /* Paleta Oscura Industrial */
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #000000; /* Fondo negro puro para que el video resalte */
+  --border: rgba(255, 255, 255, 0.1);
+  --code-bg: #111111;
+  
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  color-scheme: dark; /* Forzamos tema oscuro */
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    @apply bg-black text-white;
+  }
+
+  /* Ajuste de los títulos que pasaste */
+  h1 {
+    @apply font-black tracking-tighter text-white;
+    font-size: clamp(2rem, 8vw, 6rem); /* Responsivo automático */
+    margin: 1rem 0;
+  }
+
+  h2 {
+    @apply font-bold text-white;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+}
+
+@layer components {
+  /* Tu contenedor #root adaptado para no romper el Hero */
+  #root {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  /* El Navbar Glass que tenías */
+  .glass-nav {
+    @apply backdrop-blur-xl bg-black/60 border-b border-white/10 sticky top-0 z-50;
+  }
+
+  /* La animación de las cartas */
+  .card-appear {
+    animation: var(--animate-fade-in-up);
+  }
+}
+
+/* Scrollbar minimalista */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #3b82f6; }

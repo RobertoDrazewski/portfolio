@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "ROBERTO",
+    "role": "Técnico Electrónico | Embedded & Full Stack Engineer",
+    "about_me": "Técnico Electrónico especializado en <1>Embedded Systems</1>. Cierro la brecha entre el hardware y el software, desarrollando desde firmware de bajo nivel hasta infraestructuras <2>Full Stack</2> escalables para el sector industrial e IoT.",
+    "frontend": "Frontend UI",
+    "backend": "Core & Embebidos",
+    "tools": "Herramientas Industriales"
+  },
+  "projects": {
+    "title": "Proyectos Recientes",
+    "sync": "Sincronizando con GitHub...",
+    "no_repos": "No se encontraron repositorios públicos activos.",
+    "view_repo": "REPO",
+    "view_info": "INFO",
+    "view_demo": "LIVE",
+    "no_description": "Ingeniería de Software Industrial"
+  }
+}
