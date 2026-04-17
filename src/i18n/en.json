@@ -5,9 +5,8 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "ROBERTO",
     "role": "Electronic Tech | Embedded & Full Stack Engineer",
-    "about_me": "Electronic Technician specialized in <1>Embedded Systems</1>. I bridge the gap between hardware and software, developing everything from low-level firmware to scalable <2>Full Stack</2> infrastructures for the industrial and IoT sectors.",
+    "about_me": "Electronic Technician specialized in <0>Embedded Systems</0>. I bridge the gap between hardware and software, developing everything from low-level firmware to scalable <1>Full Stack</1> infrastructures for the industrial and IoT sectors.",
     "frontend": "Frontend UI",
     "backend": "Core & Embedded",
     "tools": "Industrial Tools"

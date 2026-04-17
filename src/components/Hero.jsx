@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import { 
-  SiCplusplus, SiPython, SiJavascript, SiNodedotjs, SiExpress, 
+  SiCplusplus, SiPython, SiNodedotjs, SiExpress, 
   SiReact, SiVite, SiPostman, SiSelenium, SiJira, SiMysql, 
-  SiPhpmyadmin, SiTypescript, SiTailwindcss 
+  SiTypescript, SiTailwindcss 
 } from 'react-icons/si';
 import { FaLinkedin, FaGithub, FaWindows } from 'react-icons/fa';
 import { LuCpu, LuChevronDown } from 'react-icons/lu';
@@ -55,7 +55,7 @@ const Hero = () => {
 
       <div className="relative z-20 text-center px-6 max-w-5xl mx-auto">
         
-        {/* Badge superior */}
+        {/* Badge superior dinámico */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-[9px] font-bold tracking-[0.3em] uppercase mb-6">
           <LuCpu className="animate-pulse" />
           <span>{t('hero.role')}</span>
@@ -66,19 +66,18 @@ const Hero = () => {
           ROBERTO <span className="text-blue-600 drop-shadow-[0_0_15px_rgba(37,99,235,0.3)]">DRAZEWSKI</span>
         </h1>
 
-        {/* Reseña Elaborada */}
+        {/* Reseña Elaborada - SIN TEXTO DURO para evitar duplicados */}
         <div className="max-w-3xl mx-auto mb-10">
           <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light">
             <Trans i18nKey="hero.about_me">
-              Técnico Electrónico especializado en <span className="text-white font-medium italic">Embedded Systems</span>. 
-              Cierro la brecha entre el hardware y el software, desarrollando desde 
-              firmware de bajo nivel hasta infraestructuras <span className="text-white font-medium italic">Full Stack</span> escalables 
-              para el sector industrial e IoT.
+              {/* i18next usará estos componentes para reemplazar <0></0> y <1></1> del JSON */}
+              <span className="text-white font-medium italic" />
+              <span className="text-white font-medium italic" />
             </Trans>
           </p>
         </div>
 
-        {/* --- VIDEO RESULTADO FINAL --- */}
+        {/* Video de Resultado */}
         <div className="relative z-30 max-w-4xl mx-auto mb-16 rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_-12px_rgba(37,99,235,0.2)] bg-black/50">
           <video 
             controls 
@@ -97,7 +96,7 @@ const Hero = () => {
             href="https://github.com/RobertoDrazewski" 
             target="_blank" 
             rel="noreferrer" 
-            className="flex items-center gap-2 px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 w-full sm:w-auto text-[10px] tracking-widest uppercase"
+            className="flex items-center justify-center gap-2 px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 w-full sm:w-auto text-[10px] tracking-widest uppercase"
           >
             <FaGithub size={16} /> GitHub
           </a>
@@ -105,13 +104,13 @@ const Hero = () => {
             href="https://www.linkedin.com/in/robert-drazewski" 
             target="_blank" 
             rel="noreferrer" 
-            className="flex items-center gap-2 px-8 py-3 bg-[#0077b5] text-white font-bold rounded-full hover:shadow-[0_0_20px_rgba(0,119,181,0.4)] transition-all duration-300 w-full sm:w-auto text-[10px] tracking-widest uppercase"
+            className="flex items-center justify-center gap-2 px-8 py-3 bg-[#0077b5] text-white font-bold rounded-full hover:shadow-[0_0_20px_rgba(0,119,181,0.4)] transition-all duration-300 w-full sm:w-auto text-[10px] tracking-widest uppercase"
           >
             <FaLinkedin size={16} /> LinkedIn
           </a>
         </div>
 
-        {/* Rejilla de Tecnologías */}
+        {/* Rejilla de Tecnologías Dinámica */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-12 border-t border-white/5">
           {techCategories.map((cat, idx) => (
             <div key={idx} className="flex flex-col items-center">
